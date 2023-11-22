@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales Prediction</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles for dark theme */
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            background: radial-gradient(#222, #121212);
+            overflow: hidden;
+            padding-bottom: 2rem; /* Space for the buttons at the bottom */
+        }
+
+        /* Header styles */
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff9900, #ff5f6d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s linear infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 0 #ff9900);
+            }
+            to {
+                filter: drop-shadow(0 0 10px #ff5f6d);
+            }
+        }
+
+        /* Predict button styles */
+        .predict-btn {
+            background-color: #aaa; /* Moon dust color */
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: pulse 1.5s infinite;
+            margin-bottom: 1rem;
+        }
+
+        .predict-btn:hover {
+            background-color: #888; /* Darker moon dust color on hover */
+            animation: fadeInUp 1.5s ease-out 0.5s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 95, 109, 0.7);
+            }
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 10px rgba(255, 95, 109, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 95, 109, 0);
+            }
+        }
+
+        /* Additional button styles */
+        .additional-btns {
+            display: flex;
+        }
+
+        .additional-btns button {
+            background-color: #333; /* Same color for other buttons */
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 1rem; /* Spacing between buttons */
+        }
+
+        .additional-btns button:hover {
+            background-color: #555; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Sales Predictor</h1>
+
+    <div class="additional-btns">
+        <button>Toyota</button> <!-- New button -->
+        <button>BMW</button> <!-- New button -->
+    </div>
+
+    <a href="/predict" class="btn predict-btn">Predict Now</a>
+</body>
+</html>
+
+
+
+
+
+
+
